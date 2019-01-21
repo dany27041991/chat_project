@@ -1,0 +1,13 @@
+<ion-list>
+  <ion-item-divider id="lastmessages">Last Messages</ion-item-divider>
+
+  <ion-item *ngFor="let message of lastMexObj">
+    <ion-item no-lines (click)="navigateToMessage(message)">
+      <ion-avatar item-left>
+        <img src="assets/imgs/profile-placeholder.png" alt="Avatar">
+      </ion-avatar>
+      <h2 id="profile">{{ message?.userFromProfile?.firstName }} {{ message?.userFromProfile?.lastName }}</h2>
+      <p>{{ message?.content }}</p>
+    </ion-item>
+  </ion-item>
+</ion-list>

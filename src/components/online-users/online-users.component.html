@@ -1,0 +1,11 @@
+<ion-list>
+  <ion-item-divider id="onlineuser">Online User</ion-item-divider>
+  <ion-item no-lines *ngFor="let user of userList | async" (click)="openChat(user)" >
+    <ion-item no-lines *ngIf="user.mykey !== userKey">
+      <ion-avatar item-left>
+        <img src="assets/imgs/profile-placeholder.png" alt="Avatar">
+      </ion-avatar>
+      <h2 id="profile">{{ user.firstName }} {{ user.lastName }} </h2> <p id="online">Online</p>
+    </ion-item>
+  </ion-item>
+</ion-list>

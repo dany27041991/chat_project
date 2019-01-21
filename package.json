@@ -1,5 +1,5 @@
 {
-  "name": "chat_project",
+  "name": "chat",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
@@ -15,7 +15,7 @@
     "@angular/common": "5.2.11",
     "@angular/compiler": "5.2.11",
     "@angular/compiler-cli": "5.2.11",
-    "@angular/core": "5.2.11",
+    "@angular/core": "^5.2.11",
     "@angular/forms": "5.2.11",
     "@angular/http": "5.2.11",
     "@angular/platform-browser": "5.2.11",
@@ -24,14 +24,23 @@
     "@ionic-native/splash-screen": "~4.18.0",
     "@ionic-native/status-bar": "~4.18.0",
     "@ionic/storage": "2.2.0",
+    "@types/node": "^10.12.18",
+    "angular2-auto-scroll": "^1.0.13",
+    "angular2-uuid": "^1.1.1",
+    "angularfire2": "^5.1.1",
+    "firebase": "^5.7.3",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
-    "rxjs": "5.5.11",
+    "natives": "^1.1.6",
+    "npm-install-peers": "^1.2.1",
+    "rxjs": "^6.3.3",
+    "rxjs-compat": "^6.3.3",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.26"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.2.1",
+    "@ionic/lab": "1.0.17",
     "typescript": "~2.6.2"
   },
   "description": "An Ionic project"

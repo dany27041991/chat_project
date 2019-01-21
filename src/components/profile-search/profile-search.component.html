@@ -1,0 +1,24 @@
+<ion-searchbar id="searchbar" [(ngModel)]="query" (ionChange)="searchUser(query)"></ion-searchbar>
+
+<ion-list no-lines *ngIf="profileList?.length > 0">
+    <ion-item no-lines class="lines" no-lines *ngFor="let profile of profileList" (click)="selectProfile(profile)">
+      <ion-item no-lines *ngIf="profile.mykey !== keyUserLogged">
+          <ion-avatar item-left>
+              <img src="assets/imgs/profile-placeholder.png" alt="Avatar">
+          </ion-avatar>
+        <h2> <b> {{ profile.firstName }} {{ profile.lastName  }} </b> </h2>
+      </ion-item>
+    </ion-item>
+</ion-list>
+
+<ion-item-divider id="alluser">All Users</ion-item-divider>
+<ion-list>
+  <ion-item no-lines class="lines" no-lines *ngFor="let profile of allProfileList" (click)="selectProfile(profile)">
+    <ion-item class="profiles" no-lines *ngIf="profile.mykey !== keyUserLogged">
+      <ion-avatar item-left>
+        <img src="assets/imgs/profile-placeholder.png" alt="Avatar">
+      </ion-avatar>
+      <h2> <b>{{ profile.firstName }} {{ profile.lastName  }} </b> </h2>
+    </ion-item>
+  </ion-item>
+</ion-list>

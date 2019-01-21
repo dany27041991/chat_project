@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ selectedProfile?.firstName }} {{ selectedProfile?.lastName }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="messagesContent" #scrollBottom>
+
+  <ion-item id="messagesContentChild" no-lines *ngFor="let message of mex">
+    <ion-item no-lines class="chat-message__message-right chatmessage" *ngIf="message.userFromId === userId; else from">
+
+      <div item-right id="sender" text-wrap class="chatmessage">
+        <!--<h2>{{ message?.userFromProfile?.firstName }} {{ message?.userFromProfile?.lastName }}</h2>-->
+        <p class="text">{{ message.content}}</p>
+        <p class="data">{{ message.datetime | date:'medium'}}</p>
+      </div>
+      <ion-avatar class="avatar" item-end>
+        <img src="assets/imgs/profile-placeholder.png" alt="Avatar">
+      </ion-avatar>
+    </ion-item>
+
+    <ng-template #from>
+      <ion-item no-lines class="chatmessage">
+        <ion-avatar class="avatar" item-left>
+          <img src="assets/imgs/profile-placeholder.png" alt="Avatar">
+        </ion-avatar>
+        <div item-left id="receiver" text-wrap class="chatmessage">
+          <!--<h2>{{ message?.userFromProfile?.firstName }} {{ message?.userFromProfile?.lastName }}</h2>-->
+          <p class="text">{{ message.content}}</p>
+          <p class="data">{{ message.datetime | date:'medium'}}</p>
+        </div>
+      </ion-item>
+    </ng-template>
+
+  </ion-item>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <app-send-message-box (sendMessage)="sendMessage($event)"></app-send-message-box>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,25 @@
+.lines {
+  margin-bottom: -20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#searchbar {
+  border-radius: 5px;
+}
+
+#alluser {
+  background: #ECEFF1;
+  border-radius: 5px;
+  font-weight: bold;
+  color: black;
+}
+
+.profiles {
+  height: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+}
